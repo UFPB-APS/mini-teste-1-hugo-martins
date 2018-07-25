@@ -1,6 +1,6 @@
 public class LogicaVenda {
 
-    private Custo iv = new ImpostoSobreVenda();
+    private Custo ct;
     private Custo seguro;
 
     public Custo getSeguro() {
@@ -20,12 +20,12 @@ public class LogicaVenda {
             }
         }
         
-        if ( this.iv != null) {
-            venda.setTotal(venda.getTotal() + this.iv.calcularCusto(venda));
+        if ( this.ct != null) {
+            venda.setTotal(venda.getTotal() + this.ct.calcularCustoTotal(venda));
         }
         
         if ( this.seguro != null) {
-            venda.setTotal(venda.getTotal() + this.seguro.calcularCusto(venda));
+            venda.setTotal(venda.getTotal() + this.seguro.calcularCustoTotal(venda));
         }
         
         return venda.getTotal();

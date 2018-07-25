@@ -3,7 +3,7 @@ public class ICMS implements Custo {
     private String estadoDaLoja = "PB";
 
 
-    public double calcularCusto(Venda venda) {
+    public double calcularCustoTotal(Venda venda) {
         
         if (estadoDaLoja.equals(venda.getEstadoDoCliente())) {
             return 0.0;
